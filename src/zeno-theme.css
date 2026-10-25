@@ -1,0 +1,121 @@
+/* The Zeno skin for nom-ui, imported after nom-ui/style.css. Every variable
+   in the two theme blocks is one nom-ui already reads, so nom-ui components
+   pick it up unchanged. The values come from the Zeno Design System's
+   tokens.json. */
+
+@layer base {
+  :root {
+    --radius: 0.25rem;
+    --plasma: linear-gradient(180deg, #50f250 0%, #00c257 100%);
+    --layer-l2: #151515;
+    --layer-l1: #097535;
+    --sidebar: #eef1ef;
+    --sidebar-foreground: #151515;
+    --sidebar-border: #d9dfdc;
+    --sidebar-accent: #e3e8e5;
+    --sidebar-accent-foreground: #151515;
+    --sidebar-primary: #097535;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-ring: #097535;
+    --background: #fafbfa;
+    --foreground: #151515;
+    --card: #ffffff;
+    --card-foreground: #151515;
+    --popover: #ffffff;
+    --popover-foreground: #151515;
+    --primary: #00a844;
+    --primary-foreground: #0a1f12;
+    --on-plasma: #0a1f12;
+    --secondary: #eef1ef;
+    --secondary-foreground: #151515;
+    --muted: #eff2f0;
+    --muted-foreground: #59625e;
+    --accent: #e3f5ea;
+    --accent-foreground: #151515;
+    --link: #0061eb;
+    --highlight: #b80f6e;
+    --destructive: #c42240;
+    --destructive-foreground: #ffffff;
+    --success: #087a3b;
+    --success-foreground: #ffffff;
+    --warning: #9a5b00;
+    --warning-foreground: #ffffff;
+    --info: #0061eb;
+    --info-foreground: #ffffff;
+    --border: #dde2df;
+    --input: #7a847f;
+    --ring: #097535;
+    --chart-1: #00a844;
+    --chart-2: #009ba1;
+    --chart-3: #0061eb;
+    --chart-4: #7c3bbd;
+    --chart-5: #d1137a;
+    --elevation-1: 0 1px 2px 0 rgba(21, 21, 21, 0.06);
+    --elevation-2: 0 1px 3px 0 rgba(21, 21, 21, 0.08), 0 1px 2px -1px rgba(21, 21, 21, 0.06);
+    --elevation-3: 0 4px 12px -2px rgba(21, 21, 21, 0.1);
+    --elevation-4: 0 12px 24px -6px rgba(21, 21, 21, 0.13);
+    --elevation-5: 0 24px 48px -12px rgba(21, 21, 21, 0.18);
+    --elevation-panel: -14px -4px 36px -20px rgba(21, 21, 21, 0.16), inset 1px 1px 0 0 rgba(255, 255, 255, 0.8);
+  }
+
+  .dark {
+    --layer-l2: #f2f4f3;
+    --layer-l1: #00d557;
+    --sidebar: #0d0f0e;
+    --sidebar-foreground: #f2f4f3;
+    --sidebar-border: #222725;
+    --sidebar-accent: #171b19;
+    --sidebar-accent-foreground: #f2f4f3;
+    --sidebar-primary: #00d557;
+    --sidebar-primary-foreground: #0a1f12;
+    --sidebar-ring: #00d557;
+    --background: #121413;
+    --foreground: #f2f4f3;
+    --card: #171a19;
+    --card-foreground: #f2f4f3;
+    --popover: #1d201f;
+    --popover-foreground: #f2f4f3;
+    --primary: #00d557;
+    --primary-foreground: #0a1f12;
+    --on-plasma: #0a1f12;
+    --secondary: #1b1f1d;
+    --secondary-foreground: #f2f4f3;
+    --muted: #1d211f;
+    --muted-foreground: #9aa29e;
+    --accent: #1b2620;
+    --accent-foreground: #f2f4f3;
+    --link: #6aaeff;
+    --highlight: #ff4fae;
+    --destructive: #ff6a82;
+    --destructive-foreground: #2a0610;
+    --success: #2ee07a;
+    --success-foreground: #0a1f12;
+    --warning: #f5a524;
+    --warning-foreground: #1f1300;
+    --info: #6aaeff;
+    --info-foreground: #03121f;
+    --border: #262b29;
+    --input: #68726d;
+    --ring: #00d557;
+    --chart-1: #00d557;
+    --chart-2: #00b4bc;
+    --chart-3: #4c9bff;
+    --chart-4: #9a5bd6;
+    --chart-5: #f91690;
+    --elevation-1: 0 1px 2px 0 rgba(0, 0, 0, 0.45);
+    --elevation-2: 0 2px 6px -1px rgba(0, 0, 0, 0.55), inset 0 1px 0 0 rgba(255, 255, 255, 0.04);
+    --elevation-3: 0 8px 18px -4px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+    --elevation-4: 0 14px 32px -8px rgba(0, 0, 0, 0.65), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+    --elevation-5: 0 28px 56px -12px rgba(0, 0, 0, 0.7), inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
+    --elevation-panel: -20px -6px 48px -24px rgba(0, 0, 0, 0.9), inset 1px 1px 0 0 rgba(255, 255, 255, 0.04);
+  }
+}
+
+/* Tokens nom-ui has no slot for. Register them for Tailwind utilities. */
+@theme inline {
+  --color-on-plasma: var(--on-plasma);
+  --color-link: var(--link);
+  --color-highlight: var(--highlight);
+  --color-layer-l1: var(--layer-l1);
+  --color-layer-l2: var(--layer-l2);
+}

@@ -1,0 +1,27 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 24
+          cache: npm
+      # npm ci runs the prepare scripts, which build znn-typescript-sdk
+      # and zeno-client from their pinned commits.
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+      # Typechecks with vue-tsc, then runs vite build.
+      - run: npm run build
